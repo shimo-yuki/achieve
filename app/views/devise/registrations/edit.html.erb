@@ -7,7 +7,7 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -34,6 +34,12 @@
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :icon %><br />
+    <%= image_tag(@user.icon) if @user.icon.attachmentd? %>
+    <%= f.file_field :icon %>
   </div>
 
   <div class="actions">
