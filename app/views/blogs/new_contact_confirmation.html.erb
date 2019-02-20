@@ -1,0 +1,17 @@
+
+<h1>お問い合わせ内容確認</h1>
+
+<%= form_for @contact,  url: blogs_new_contact_path  do |f| %>
+<p>名前: <%= @contact.username %></p>
+<%= f.hidden_field :username %>
+<p>メールアドレス: <%= @contact.email %></p>
+<%= f.hidden_field :email %>
+<p>カテゴリー: <%= @contact.category %></p>
+<%= f.hidden_field :category %>
+<p>内容: <%= @contact.content %></p>
+<%= f.hidden_field :content %>
+
+<%= f.submit "戻る", name: 'back' %>
+<%= f.submit "送信" %>
+
+<% end %>

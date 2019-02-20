@@ -51,6 +51,7 @@ group :development do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :test do
@@ -65,3 +66,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dotenv-rails'
 gem 'rails_12factor', group: :production
+gem 'devise'
