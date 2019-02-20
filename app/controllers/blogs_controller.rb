@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :new_contact]
 
   # GET /blogs
   # GET /blogs.json
@@ -29,6 +30,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
+        NoticeMailer.sendmail_blog(@blog).deliver
         format.html { redirect_to blog_url(@blog.id), notice: 'Blog was successfully created.' }
         format.json { render :show, status: :created, location: @blog }
       else
@@ -63,15 +65,43 @@ class BlogsController < ApplicationController
     end
   end
 
+  def new_contact
+    @contact = Contact.new
+
+  end
+
+  def new_contact_confirmation
+    @contact = Contact.new(contact_params)
+  end
+
+  def new_contact_create
+    @contact = Contact.new(contact_params)
+    respond_to do |format|
+      if params[:back]
+        format.html { render :new_contact}
+      elsif @contact.save
+        NoticeMailer.sendmail_blog(@contact).deliver
+        format.html { redirect_to blogs_new_contact_finish_path, notice: 'Blog was successfully created.' }
+        format.json { render :new_contact, status: :created, location: @contact }
+      else
+        format.html { render :new_contact }
+        format.json { render json: @contact.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
       @blog = Blog.find(params[:id])
-      binding.pry
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
       params.require(:blog).permit(:title, :content)
+    end
+
+    def contact_params
+      params.require(:contact).permit(:username, :email, :category, :content )
     end
 end
