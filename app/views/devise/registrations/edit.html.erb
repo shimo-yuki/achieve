@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= f.label :icon %><br />
-    <%= image_tag(@user.icon) if @user.icon.attachmentd? %>
+    <%= image_tag(@user.icon) if @user.icon.attached? %>
     <%= f.file_field :icon %>
   </div>
 
