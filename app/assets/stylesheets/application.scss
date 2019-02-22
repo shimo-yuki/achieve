@@ -1,0 +1,304 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap";
+@import 'blogs';
+@import 'scaffolds';
+@import "font-awesome";
+
+//application
+
+.clearfix::after{
+   content: "";
+   display: block;
+   clear: both;
+}
+
+html {
+  height: 100%;
+}
+img{
+  width: 100px;
+}
+
+body {
+  padding-top: 54px;
+  margin: 0px;
+  margin-bottom: 5em;
+  height: 100%;
+}
+
+.test{
+  width: 100%;
+   position: relative;
+   height: 100%;
+   min-height: 100%;
+}
+.container{
+  float:left;
+
+}
+
+footer{
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+
+  }
+}
+
+.blog , .users, .blog-edit{
+  margin-bottom: 60px;
+  text-align:center;
+  width: 100%;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.pagination {
+  margin-bottom: 30px;
+}
+
+// _header
+.current_user{
+  position: relative;
+  float:left;
+  z-index: 3;
+  width: 250px;
+  height:250px;
+  background-color: #FFFAF0;
+  border-radius: 50px;
+  text-align: center;
+  margin: 50px;
+}
+
+.no-current_user{
+  position: relative;
+  float:left;
+  width: 250px;
+  height:250px;
+}
+.current_user p{
+  padding-top: 30px;
+}
+
+
+//top
+.top{
+  width: 900px;
+  height: 900px;
+  background-color:  #FBDAC8;
+  border-radius: 100%;
+  margin: 30px auto;
+}
+.top-name{
+  text-align: center;
+  font-size: 100px;
+  line-height: 1;
+  margin-top: -40px;
+}
+.top-myname{
+  text-align: center;
+  font-size: 30px;
+  line-height: 1;
+}
+.top-photo{
+  float: left;
+  width: 30%;
+  text-align: center;
+}
+.top img{
+  width: 50%;
+  border-radius: 50%;
+  margin-top:300px;
+}
+
+.top-info{
+  float: left;
+  width: 70%;
+}
+
+.top-team{
+  margin-left: 20%;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #f9b1a3;
+  width: 100px;
+  height: 100px;
+}
+
+.top-team h5{
+  line-height: 0.5;
+  font-size: 30px
+}
+
+.top-team p{
+  line-height: 2;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.top-like{
+  float: right;
+  text-align: center;
+  border-radius: 50%;
+  background-color:#e2eafe;
+  width: 300px;
+  height: 300px;
+  margin-right: 5%;
+}
+
+.top-like h5{
+  line-height: 0.5;
+  font-size: 45px;
+}
+
+.top-like ul{
+  list-style: none;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.top-when{
+  float: left;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color:  #f8ed9f;
+  border-radius: 100%;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.top-when h5{
+  line-height: 1;
+}
+.top-when p{
+    line-height: 3;
+}
+.top-why{
+  float: left;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color:  #e9fff1;
+  border-radius: 100%;
+  margin-top: 10%;
+}
+
+.top-aim{
+  float: right;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color:  #c398ba;
+  border-radius: 100%;
+  margin-top: 10%;
+  margin-right: 30%;
+
+}
+
+.top-people{
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color: #efefef;
+  border-radius: 100%;
+  margin-top: 80%;
+  margin-left: 20%;
+
+}
+
+//blog-index
+.blog-panel{
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  border-radius: 30px;
+  margin: 30px;
+  text-align: center;
+}
+
+.blog-panel h3{
+  margin-top:5px;
+}
+
+.blog-panel .btn{
+  margin-bottom: 10px;
+}
+
+//user-index
+.user-panel{
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  border-radius: 30px;
+  margin: 30px;
+  text-align: center;
+}
+
+.user-panel h4{
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.user-panel .btn{
+  margin-bottom: 10px;
+}
+
+//contact
+
+.contact{
+  width:100%;
+  text-align: center;
+}
+
+.contact p{
+  margin: 30px;
+}
+.current_user .btn-outline-secondary{
+  width: 50%;
+  margin-top: 10px;
+}
+.new_contact{
+  text-align: center;
+}
+
+.new{
+  text-align: center;
+}
+
+//user-show
+.user_show{
+  width:100%;
+  text-align: center;
+  margin-top: 100px;
+}
+
+//sign-up
+.card, .form_group{
+  width: 50%;
+}
+
+.field{
+  width: 100%;
+}

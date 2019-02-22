@@ -5,7 +5,11 @@ class NoticeMailer < ApplicationMailer
   #
   #   en.notice_mailer.sendmail_blog.subject
   #
-
+  #
+  # def sendmail_blog(blog)
+  #   @blog = blog #インスタンス変数に代入
+  #   mail to: "(your_mail_address)", subject: "新規ブログが作成されました"
+  # end
 
 
   def sendmail_blog(contact)
