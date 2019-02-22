@@ -233,17 +233,8 @@ footer{
   height: 100%;
   background-color: #f0f0f0;
   border-radius: 30px;
-  margin: 30px;
-  text-align: center;
 }
 
-.blog-panel h3{
-  margin-top:5px;
-}
-
-.blog-panel .btn{
-  margin-bottom: 10px;
-}
 
 //user-index
 .user-panel{
@@ -251,19 +242,11 @@ footer{
   height: 100%;
   background-color: #f0f0f0;
   border-radius: 30px;
-  margin: 30px;
   text-align: center;
 }
 
-.user-panel h4{
-  padding-top: 10px;
-  padding-bottom: 10px;
 
-}
 
-.user-panel .btn{
-  margin-bottom: 10px;
-}
 
 //contact
 
@@ -272,12 +255,9 @@ footer{
   text-align: center;
 }
 
-.contact p{
-  margin: 30px;
-}
+
 .current_user .btn-outline-secondary{
   width: 50%;
-  margin-top: 10px;
 }
 .new_contact{
   text-align: center;
@@ -291,7 +271,6 @@ footer{
 .user_show{
   width:100%;
   text-align: center;
-  margin-top: 100px;
 }
 
 //sign-up

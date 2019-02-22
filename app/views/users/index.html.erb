@@ -2,7 +2,7 @@
   <h1>Users</h1>
   <div class="row">
     <% @users.each do |user| %>
-      <div class="col-md-5 user-panel">
+      <div class="col-md-5 user-panel ">
         <h4><%= user.name %></h4>
         <p><% if user.icon.attached? %>
           <%= image_tag(user.icon)  %>

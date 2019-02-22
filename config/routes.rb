@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 root "users#top"
   devise_for :users
 
-  get 'blogs/new_contact_finish'
+  get 'contacts/finish'
   resources :blogs
   resources :users
   resources :contacts, only: [:index, :new, :create]

@@ -1,14 +1,18 @@
-<div class="blog ">
+<div class="blog">
   <h1>Listing Blogs</h1>
   <div class="row">
     <% @blogs.each do |blog| %>
-      <div class="　 col-md-3  blog-panel">
-        <h3><%= blog.title %></h3>
-        <h6><%= blog.content %></h6>
-        <div class="blog-links">
-          <%= link_to 'Show', blog, class: "btn btn-default" %><br>
-          <%= link_to 'Edit', edit_blog_path(blog), class: "btn btn-info" %><br>
-          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger destroy"%>
+      <div class="col-md-3">
+        <div class="col-xs-8 col-xs-offset-2 mb-3 ">
+          <div class="blog-panel">
+            <h3><%= blog.title %></h3>
+            <h6><%= blog.content %></h6>
+            <div class="blog-links">
+              <%= link_to 'Show', blog, class: "btn btn-default" %><br>
+              <%= link_to 'Edit', edit_blog_path(blog), class: "btn btn-info" %><br>
+              <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger destroy"%>
+            </div>
+          </div>
         </div>
       </div>
     <% end %>
