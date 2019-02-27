@@ -1,18 +1,31 @@
-<div class="users">
+<div class="users text-center">
   <h1>Users</h1>
   <div class="row">
-    <% @users.each do |user| %>
-      <div class="col-md-5 user-panel ">
-        <h4><%= user.name %></h4>
-        <p><% if user.icon.attached? %>
-          <%= image_tag(user.icon)  %>
-        <% else %>
-          <%= image_tag("noimage.png") %>
-        <% end %></p>
-        <div class="blog-links">
-            <%= link_to 'Show', user, class: "btn btn-default" %>
-        </div>
+    <div class="col-md-3">
+      <%= render 'layouts/profile' %>
+    </div>
+
+    <div class="col-md-9">
+      <div class="row">
+        <% @users.each do |user| %>
+          <div class="col-md-6 ">
+            <div class="row">
+              <div class="col-md-10 offset-md-1 user-panel mt-2">
+                <h4 class="pt-1 text-center"><%= user.name %></h4>
+                <p class="text-center">
+                <% if user.icon.attached? %>
+                  <%= image_tag(user.icon) %>
+                <% else %>
+                  <%= image_tag("noimage.png") %>
+                <% end %></p>
+                <div class="blog-links">
+                  <%= link_to 'Show', user, class: "btn btn-default m-2" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>

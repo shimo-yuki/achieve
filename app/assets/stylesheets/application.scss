@@ -44,10 +44,7 @@ body {
    height: 100%;
    min-height: 100%;
 }
-.container{
-  float:left;
 
-}
 
 footer{
   position: fixed;
@@ -65,41 +62,20 @@ footer{
 }
 
 .blog , .users, .blog-edit{
-  margin-bottom: 60px;
-  text-align:center;
   width: 100%;
 }
 
-.portfolio-item {
-  margin-bottom: 30px;
-}
 
-.pagination {
-  margin-bottom: 30px;
-}
 
 // _header
-.current_user{
+.current_user, .no-current_user{
   position: relative;
   float:left;
   z-index: 3;
-  width: 250px;
-  height:250px;
   background-color: #FFFAF0;
   border-radius: 50px;
-  text-align: center;
-  margin: 50px;
 }
 
-.no-current_user{
-  position: relative;
-  float:left;
-  width: 250px;
-  height:250px;
-}
-.current_user p{
-  padding-top: 30px;
-}
 
 
 //top
@@ -229,8 +205,6 @@ footer{
 
 //blog-index
 .blog-panel{
-  width: 100%;
-  height: 100%;
   background-color: #f0f0f0;
   border-radius: 30px;
 }
@@ -238,11 +212,8 @@ footer{
 
 //user-index
 .user-panel{
-  width: 100%;
-  height: 100%;
   background-color: #f0f0f0;
   border-radius: 30px;
-  text-align: center;
 }
 
 
@@ -264,13 +235,13 @@ footer{
 }
 
 .new{
+  width: 100%;
   text-align: center;
 }
 
 //user-show
 .user_show{
   width:100%;
-  text-align: center;
 }
 
 //sign-up

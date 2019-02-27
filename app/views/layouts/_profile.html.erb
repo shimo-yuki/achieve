@@ -1,0 +1,29 @@
+<% if user_signed_in? %>
+  <div class="current_user col-md-12 mt-3 mb-2 center-block">
+    <p class="m-3 text-center">
+      <% if current_user.icon.attached? %>
+        <%= image_tag(current_user.icon)  %>
+      <% else %>
+        <%= image_tag("noimage.png") %>
+      <% end %>
+    </p>
+    <p class="m-4 text-center">
+      <strong>name:</strong>
+      <%= current_user.name %>
+    </p>
+    <div class="text-center">
+      <%= link_to edit_user_registration_path, class:"btn btn-outline-secondary m-2" do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <div class="no-current_user col-md-12 mt-3 mb-2 center-block">
+    <p class="m-3 text-center">
+      <%= image_tag("noimage.png") %>
+    </p>
+    <p class="m-4 text-center">
+      <strong>ゲストユーザー</strong>
+    </p>
+  </div>
+<% end %>
