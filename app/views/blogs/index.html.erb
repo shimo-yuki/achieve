@@ -10,7 +10,9 @@
       <% @blogs.each do |blog| %>
         <div class="col-md-3 m-3">
           <div class="blog-panel text-center ">
-            <h3 class="m-3"><%= blog.user.name %></h3>
+            <% if blog.user != nil %>
+              <h3 class="m-3"><%= blog.user.name %></h3>
+            <% end %>
             <h3 class="m-3"><%= blog.title %></h3>
             <h6 class="m-2"><%= blog.content %></h6>
             <div class="blog-links">

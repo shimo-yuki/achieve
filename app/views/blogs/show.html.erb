@@ -9,8 +9,10 @@
   <%= @blog.content %>
 </p>
 <% if user_signed_in? %>
-  <% if @blog.user == current_user %>
-    <%= link_to 'Edit', edit_blog_path(@blog) %> |
+  <% if @blog.user != nil %>
+    <% if @blog.user == current_user %>
+      <%= link_to 'Edit', edit_blog_path(@blog) %> |
+    <% end %>
   <% end %>
 <% end %>
 <%= link_to 'Back', blogs_path %>
