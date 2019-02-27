@@ -52,6 +52,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'letter_opener_web', '~> 1.0'
+  gem 'bullet'
 end
 
 group :test do
@@ -70,3 +71,4 @@ gem 'devise'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
+gem 'kaminari'

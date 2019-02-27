@@ -8,6 +8,10 @@ class ContactsController < ApplicationController
 
   def index
     @contact = Contact.new(contact_params)
+    if @contact.valid?
+    else
+      render :new
+    end
   end
 
   def create
@@ -17,7 +21,7 @@ class ContactsController < ApplicationController
         format.html { render :new}
       elsif @contact.save
         NoticeMailer.sendmail_blog(@contact).deliver
-        format.html { redirect_to blogs_new_contact_finish_path, notice: 'Blog was successfully created.' }
+        format.html { redirect_to contacts_finish_path, notice: 'Blog was successfully created.' }
         format.json { render :new_contact, status: :created, location: @contact }
       else
         format.html { render :new }
