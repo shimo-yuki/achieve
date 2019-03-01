@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
   has_one_attached :icon
-  validates :username, :email,  presence: true
+  validates  :email,  presence: true
   has_many :blogs, dependent: :destroy
 end
