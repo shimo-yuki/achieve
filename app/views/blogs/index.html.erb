@@ -11,18 +11,12 @@
         <div class="col-md-3 pb-3">
           <div class="blog-panel text-center ">
             <% if blog.user != nil %>
-              <h3 class=" p-3"><%= blog.user.name %></h3>
+              <h3 class=" p-3"><%= blog.user.name.truncate(10)%></h3>
             <% end %>
-            <h3 class="m-3"><%= blog.title %></h3>
-            <h6 class="m-2"><%= blog.content %></h6>
+            <h3 class="m-3"><%= blog.title.truncate(10) %></h3>
+            <h6 class="m-2"><%= blog.content.truncate(25) %></h6>
             <div class="blog-links ">
-              <%= link_to 'Show', blog, class: "btn btn-default m-2" %><br>
-              <% if user_signed_in? %>
-                <% if blog.user == current_user %>
-                  <%= link_to 'Edit', edit_blog_path(blog), class: "btn btn-info m-2" %><br>
-                  <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger destroy m-2"%>
-                <% end %>
-              <% end %>
+              <%= link_to 'Show', blog, class: "btn btn-light m-2" %><br>
             </div>
           </div>
         </div>
