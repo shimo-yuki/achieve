@@ -1,18 +1,23 @@
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+  <div class="text-center">
+    <h1>
+      <%= @blog.title %>
+    </h1>
+  </div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @blog.content %>
-</p>
-<% if user_signed_in? %>
-  <% if @blog.user != nil %>
-    <% if @blog.user == current_user %>
-      <%= link_to 'Edit', edit_blog_path(@blog) %> |
+  <div class="text-center">
+    <p>
+    <%= @blog.content %>
+    </p>
+  </div>
+  <div class="text-center">
+    <% if user_signed_in? %>
+      <% if @blog.user != nil %>
+        <% if @blog.user == current_user %>
+          <%= link_to 'Edit', edit_blog_path(@blog),  class:"btn btn-outline-dark mb-3" %> |
+        <% end %>
+      <% end %>
     <% end %>
-  <% end %>
-<% end %>
-<%= link_to 'Back', blogs_path %>
+
+    <%= link_to 'Back', blogs_path, class:"btn btn-outline-dark mb-3"%>
+  </div>

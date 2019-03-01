@@ -1,49 +1,54 @@
-<div class="row mt-3">
-  <div class="col-md-12 text-center">
-    <h3>お問い合わせ</h3>
-    <div class="contact">
-      <% if @contact.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this blog from being saved:</h2>
-          <ul>
-            <% @contact.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-
-      <%= form_for @contact,  html: {method: 'GET'} do |f| %>
-        <div class="contact-form">
-          <div class="field">
-            <%= f.label :username %>
-            <%= f.text_field :username %>
+<div class="row m-3">
+  <div class="col-md-6 offset-md-3">
+    <div class="card">
+      <h5 class="card-header text-center">お問い合わせ</h5>
+      <div class="form_group  col-md-8 offset-md-2">
+        <% if @contact.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this blog from being saved:</h2>
+            <ul>
+              <% @contact.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
           </div>
-
-          <div class="field">
-            <%= f.label :email %>
-            <%= f.email_field :email %>
+        <% end %>
+        <%= form_for @contact,  html: {method: 'GET'} do |f| %>
+          <div class="form-group">
+            <div class="contact-form">
+              <div class="field">
+                <%= f.label :username %>
+                <%= f.text_field :username %>
+              </div>
+            </div>
           </div>
-
-          <div class="field">
-            <label><%= f.radio_button :category, "achieve" %>achieve</label>
-            <label><%= f.radio_button :category, "テキスト" %>テキスト</label>
-            <label><%= f.radio_button :category, "説明会" %>説明会</label>
-            <label><%= f.radio_button :category, "その他" %>その他</label>
+          <div class="form-group">
+            <div class="field">
+              <%= f.label :email %>
+              <%= f.email_field :email %>
+            </div>
           </div>
-
-          <div class="field">
-            <%= f.label :content %>
-            <%= f.text_area :content %>
+          <div class="form-group">
+            <div class="field">
+              <label><%= f.radio_button :category, "achieve" %>achieve</label>
+              <label><%= f.radio_button :category, "テキスト" %>テキスト</label>
+              <label><%= f.radio_button :category, "説明会" %>説明会</label>
+              <label><%= f.radio_button :category, "その他" %>その他</label>
+            </div>
           </div>
-
+          <div class="form-group">
+            <div class="field">
+              <%= f.label :content %>
+              <%= f.text_area :content %>
+            </div>
+          </div>
           <div class="actions">
             <%= button_tag :type => "submit",:class =>"btn btn-default btn-s-md" do %>
               <i class="fas fa-hand-point-right"></i>確認
             <% end %>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

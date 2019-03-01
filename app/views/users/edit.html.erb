@@ -10,18 +10,19 @@
       </ul>
     </div>
   <% end %>
+  <div class="form_group center-blocr">
+    <div class="field">
+      <%= form.label :name%>
+      <%= form.text_field :name %>
+    </div>
 
-  <div class="field">
-    <%= form.label :name%>
-    <%= form.text_field :name %>
-  </div>
+    <div class="field">
+      <%= form.label :content %>
+      <%= form.text_area :content %>
+    </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
