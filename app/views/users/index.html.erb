@@ -10,15 +10,18 @@
       <div class="row">
         <% @users.each do |user| %>
           <div class="col-md-6 ">
-            <div class="row">
+            <div class="row text-center">
               <div class="col-md-10 offset-md-1 user-panel mt-2 mb-2">
-                <h4 class="pt-1 text-center"><%= user.name %></h4>
-                <p class="text-center">
+                <% if user.name != nil %>
+                  <h3 class=" p-3"><%= user.name.truncate(10)%></h3>
+                <% else %>
+                  <h3 class="p-3" no-user</h3>
+                <% end %>
                 <% if user.icon.attached? %>
                   <%= image_tag(user.icon) %>
                 <% else %>
                   <%= image_tag("noimage.png") %>
-                <% end %></p>
+                <% end %>
                 <div class="blog-links text-center">
                   <%= link_to 'Show', user, class: "btn btn-light m-2" %>
                 </div>
