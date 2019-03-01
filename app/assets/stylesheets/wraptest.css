@@ -1,0 +1,18 @@
+.OuterFrame {
+  margin-left:0px;
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  border: solid 4px #0094ff;
+}
+
+
+.SimpleFrame {
+  margin-top:16px;
+  margin-left:16px;
+  margin-bottom:16px;
+  margin-right:16px;
+
+  border:solid 1px #808080;
+  width:200px;
+}
