@@ -8,14 +8,14 @@
   <div class="col-md-9">
     <div class="row">
       <% @blogs.each do |blog| %>
-        <div class="col-md-3 m-3">
+        <div class="col-md-3 mb-3">
           <div class="blog-panel text-center ">
             <% if blog.user != nil %>
-              <h3 class="m-3"><%= blog.user.name %></h3>
+              <h3 class="p -3"><%= blog.user.name %></h3>
             <% end %>
             <h3 class="m-3"><%= blog.title %></h3>
             <h6 class="m-2"><%= blog.content %></h6>
-            <div class="blog-links">
+            <div class="blog-links ">
               <%= link_to 'Show', blog, class: "btn btn-default m-2" %><br>
               <% if user_signed_in? %>
                 <% if blog.user == current_user %>
