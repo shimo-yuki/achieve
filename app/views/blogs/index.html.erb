@@ -13,7 +13,7 @@
             <% if blog.user != nil %>
               <h3 class=" p-3"><%= blog.user.name.truncate(10)%></h3>
             <% else %>
-              <h3 class="p-3"><%= no-user%></h3>
+              <h3 class="p-3" no-user</h3>
             <% end %>
             <h3 class="m-3"><%= blog.title.truncate(5) %></h3>
             <h6 class="m-2"><%= blog.content.truncate(25) %></h6>
