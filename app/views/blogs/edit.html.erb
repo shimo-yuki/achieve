@@ -1,9 +1,9 @@
-<div class="card text-center">
-  <h5 class="card-header">Editing Blog</h5>
+<div class="row m-3">
+  <div class="new text-center col-md-6 offset-md-3">
+    <div class="card">
+      <h5 class="card-header">Editing Blog</h5>
 
-  <%= render 'form', blog: @blog %>
-</div>
-
-  <%= link_to 'Show', @blog %> |
-  <%= link_to 'Back', blogs_path %>
+      <%= render 'form', blog: @blog %>
+    </div>
+  </div>
 </div>
