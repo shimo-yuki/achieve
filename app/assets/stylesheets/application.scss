@@ -1,29 +1,12 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- */
 @import "bootstrap";
-@import 'blogs';
 @import 'scaffolds';
 @import "font-awesome";
-
-//application
 
 .clearfix::after{
    content: "";
    display: block;
    clear: both;
 }
-
 
 img{
   width: 100px;
@@ -34,6 +17,7 @@ body,
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0px;
 }
 
 footer {
@@ -44,21 +28,10 @@ footer {
   background-color: black;
 }
 
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-
-  }
-}
-
 .blog , .users, .blog-edit{
   width: 100%;
 }
 
-
-
-// _header
 .current_user, .no-current_user{
   position: relative;
   float:left;
@@ -67,9 +40,9 @@ footer {
   border-radius: 50px;
 }
 
-
-
-//top
+.current_user, .blog-panel, .user-panel{
+  border: solid 1px #000
+}
 .top{
   width: 900px;
   height: 900px;
@@ -77,22 +50,26 @@ footer {
   border-radius: 100%;
   margin: 30px auto;
 }
+
 .top-name{
   text-align: center;
   font-size: 100px;
   line-height: 1;
   margin-top: -40px;
 }
+
 .top-myname{
   text-align: center;
   font-size: 30px;
   line-height: 1;
 }
+
 .top-photo{
   float: left;
   width: 30%;
   text-align: center;
 }
+
 .top img{
   width: 50%;
   border-radius: 50%;
@@ -155,12 +132,15 @@ footer {
   margin-top: 10%;
   margin-left: 10%;
 }
+
 .top-when h5{
   line-height: 1;
 }
+
 .top-when p{
     line-height: 3;
 }
+
 .top-why{
   float: left;
   text-align: center;
@@ -180,7 +160,6 @@ footer {
   border-radius: 100%;
   margin-top: 10%;
   margin-right: 30%;
-
 }
 
 .top-people{
@@ -191,10 +170,8 @@ footer {
   border-radius: 100%;
   margin-top: 80%;
   margin-left: 20%;
-
 }
 
-//blog-index
 .blog-panel{
   background-color: #f0f0f0;
   border-radius: 30px;
@@ -202,50 +179,40 @@ footer {
   height: 220px;
 }
 
-
-//user-index
 .user-panel{
   background-color: #f0f0f0;
   border-radius: 30px;
   height: 200px;
 }
 
-
-
-
-//contact
-
 .contact{
   width:100%;
   text-align: center;
 }
 
-
 .current_user .btn-outline-secondary{
   width: 50%;
 }
+
 .new_contact{
   text-align: center;
 }
+
 #new_contact{
   text-align: center;
 }
+
 .contact-form{
   text-align: center;
 }
+
 .new{
   width: 100%;
   text-align: center;
 }
 
-//user-show
 .user_show{
   width:100%;
-}
-
-//sign-up
-.card, .form_group{
-
 }
 
 .field{

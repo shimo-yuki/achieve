@@ -1,15 +1,13 @@
 class ContactsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :create, :destroy, :update, :edit]
 
   def new
     @contact = Contact.new
-
   end
 
   def index
     @contact = Contact.new(contact_params)
-    if @contact.valid?
-    else
+    if @contact.invalid?
       render :new
     end
   end
@@ -31,6 +29,7 @@ class ContactsController < ApplicationController
   end
 
   private
+
   def contact_params
     params.require(:contact).permit(:username, :email, :category, :content )
   end

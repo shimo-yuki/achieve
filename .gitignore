@@ -8,6 +8,7 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
+file-a.DS_Store
 *.orig
 rerun.txt
 pickle-email-*.html

@@ -1,7 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new]
-
+  before_action :authenticate_user!, only: [:new, :edit, :destroy, :update]
 
   # GET /blogs
   # GET /blogs.json
@@ -22,16 +21,12 @@ class BlogsController < ApplicationController
   end
 
   # GET /blogs/1/edit
-  def edit
-
-  end
+  def edit; end
 
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = Blog.new(blog_params)
-    @blog.user_id = current_user.id
-
+    @blog = current_user.blogs.build(blog_params)
     respond_to do |format|
       if @blog.save
         format.html { redirect_to blog_url(@blog.id), notice: 'Blog was successfully created.' }
@@ -61,24 +56,21 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1.json
   def destroy
     @blog.destroy
-    @blogs = Blog.all
     respond_to do |format|
       format.html { render :index, notice: 'Blog was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
-
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.find(params[:id])
-    end
+  def set_blog
+    @blog = Blog.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def blog_params
-      params.require(:blog).permit(:title, :content)
-    end
-
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def blog_params
+    params.require(:blog).permit(:title, :content)
+  end
 
 end
