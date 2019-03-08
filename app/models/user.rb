@@ -9,9 +9,12 @@ class User < ApplicationRecord
   has_many :blogs, dependent: :destroy
   has_many :comments, dependent: :destroy
 
+<<<<<<< HEAD
   paginates_per 10
 
 
+=======
+>>>>>>> 2bd1d6d... 0308-2 commit
   scope :index_all, ->{
     select(:id, :name)
     .order(created_at: :asc)
