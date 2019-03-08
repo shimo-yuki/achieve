@@ -11,16 +11,20 @@
         </ul>
       </div>
     <% end %>
-    <div class="form-group">
-      <div class="field">
-        <%= form.label :title %>
-        <%= form.text_field :title %>
+    <div class="form-group mt-3">
+      <div class="row center-block">
+        <%= form.label :title%>
+        <div class="col-sm-12">
+          <%= form.text_field :title, class: "form-control"%>
+        </div>
       </div>
     </div>
-    <div class="form-group">
-      <div class="field">
+    <div class="form-group mt-3">
+      <div class="row center-block">
         <%= form.label :content %>
-        <%= form.text_area :content %>
+        <div class="col-sm-12">
+          <%= form.text_field :content, class: "form-control"%>
+        </div>
       </div>
     </div>
     <div class="form-group">

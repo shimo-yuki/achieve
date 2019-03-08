@@ -14,32 +14,50 @@
           </div>
         <% end %>
         <%= form_for @contact,  html: {method: 'GET'} do |f| %>
-          <div class="form-group">
-            <div class="contact-form">
-              <div class="field">
-                <%= f.label :username %>
-                <%= f.text_field :username %>
+          <div class="form-group mt-3">
+            <div class="row center-block">
+              <%= f.label :name %>
+              <div class="col-sm-12">
+                <%= f.text_field :username, class: "form-control"%>
               </div>
             </div>
           </div>
-          <div class="form-group">
-            <div class="field">
+          <div class="form-group mt-3">
+            <div class="row center-block">
               <%= f.label :email %>
-              <%= f.email_field :email %>
+              <div class="col-sm-12">
+                <%= f.email_field :email, class: "form-control"%>
+              </div>
             </div>
           </div>
-          <div class="form-group">
-            <div class="field">
-              <label><%= f.radio_button :category, "achieve" %>achieve</label>
-              <label><%= f.radio_button :category, "テキスト" %>テキスト</label>
-              <label><%= f.radio_button :category, "説明会" %>説明会</label>
-              <label><%= f.radio_button :category, "その他" %>その他</label>
+          <div class="form-group row">
+            <div class="col-sm-12 btn-group" data-toggle="buttons">
+              <label class="btn btn-outline-secondary" style="width:50%">
+                <%= f.radio_button :category, "achieve" %>achieve
+              </label>
+            </div>
+            <div class="col-sm-12 btn-group" data-toggle="buttons">
+              <label class="btn btn-outline-secondary" style="width:50%">
+                <%= f.radio_button :category, "テキスト" %>テキスト
+              </label>
+            </div>
+            <div class="col-sm-12 btn-group" data-toggle="buttons">
+              <label class="btn btn-outline-secondary" style="width:50%">
+                <%= f.radio_button :category, "説明会" %>説明会
+              </label>
+            </div>
+            <div class="col-sm-12 btn-group" data-toggle="buttons">
+              <label class="btn btn-outline-secondary" style="width:50%">
+                <%= f.radio_button :category, "その他" %>その他
+              </label>
             </div>
           </div>
-          <div class="form-group">
-            <div class="field">
+          <div class="form-group mt-3">
+            <div class="row center-block">
               <%= f.label :content %>
-              <%= f.text_area :content %>
+              <div class="col-sm-12">
+                <%= f.text_area :content, class: "form-control"%>
+              </div>
             </div>
           </div>
           <div class="actions">
