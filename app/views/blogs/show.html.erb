@@ -13,7 +13,11 @@
   <% if user_signed_in? %>
     <% if @blog.user != nil %>
       <% if @blog.user == current_user %>
+<<<<<<< HEAD
         <%= link_to 'Edit', edit_blog_path(@blog), class:"btn btn-outline-dark mb-3" %> |
+=======
+        <%= link_to 'Edit', edit_blog_path(@blog),  class:"btn btn-outline-dark mb-3" %> |
+>>>>>>> 26363f4... 0308-10 commit
       <% end %>
     <% end %>
   <% end %>
