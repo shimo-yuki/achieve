@@ -1,33 +1,33 @@
 <% if user_signed_in? %>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
    <div class="container">
-     <%= link_to "Active", root_path, class:"navbar-brand " %>
+     <%= link_to "Active", root_path, class:"navbar-brand" %>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
      </button>
-     <div class="collapse navbar-collapse " id="navbarResponsive">
+     <div class="collapse navbar-collapse" id="navbarResponsive">
        <ul class="navbar-nav ml-auto">
          <li class="nav-item">
-           <%= link_to "Home", blogs_path, class:"nav-link " %>
+           <%= link_to "Home", blogs_path, class:"nav-link" %>
          </li>
          <li class="nav-item">
            <%= link_to "Users", users_path, class:"nav-link" %>
          </li>
          <li class="nav-item">
-           <%= link_to 'New Contact', new_contact_path, class:"nav-link" %>
+           <%= link_to "New Contact", new_contact_path, class:"nav-link" %>
          </li>
          <li class="nav-item">
-           <%= link_to 'New Blog', new_blog_path , class:"nav-link"%>
+           <%= link_to "New Blog", new_blog_path , class:"nav-link"%>
          </li>
          <li class="nav-item">
-           <%= link_to "Logout",  destroy_user_session_path, method: :delete , class:"nav-link"%>
+           <%= link_to "Logout", destroy_user_session_path, method: :delete , class:"nav-link"%>
          </li>
        </ul>
      </div>
    </div>
  </nav>
 <% else %>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#">Achieve</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,13 +39,13 @@
            <%= link_to "blogs", blogs_path, class:"nav-link" %>
          </li>
          <li class="nav-item">
-           <%= link_to 'Users', users_path, class:"nav-link" %>
+           <%= link_to "Users", users_path, class:"nav-link" %>
          </li>
          <li class="nav-item">
-           <%= link_to 'login', new_user_session_path , class:"nav-link"%>
+           <%= link_to "login", new_user_session_path , class:"nav-link"%>
          </li>
          <li class="nav-item">
-           <%= link_to "signup",new_user_registration_path,  class:"nav-link"%>
+           <%= link_to "signup",new_user_registration_path, class:"nav-link"%>
          </li>
        </ul>
      </div>

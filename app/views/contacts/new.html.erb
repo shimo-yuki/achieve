@@ -2,7 +2,7 @@
   <div class="col-md-6 offset-md-3">
     <div class="card">
       <h5 class="card-header text-center">お問い合わせ</h5>
-      <div class="form_group  col-md-8 offset-md-2">
+      <div class="form_group col-md-8 offset-md-2">
         <% if @contact.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this blog from being saved:</h2>
@@ -13,7 +13,7 @@
             </ul>
           </div>
         <% end %>
-        <%= form_for @contact,  html: {method: 'GET'} do |f| %>
+        <%= form_for @contact, html: {method: 'GET'} do |f| %>
           <div class="form-group mt-3">
             <div class="row center-block">
               <%= f.label :name %>

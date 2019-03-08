@@ -13,7 +13,7 @@
   <% if user_signed_in? %>
     <% if @blog.user != nil %>
       <% if @blog.user == current_user %>
-        <%= link_to 'Edit', edit_blog_path(@blog),  class:"btn btn-outline-dark mb-3" %> |
+        <%= link_to 'Edit', edit_blog_path(@blog), class:"btn btn-outline-dark mb-3" %> |
       <% end %>
     <% end %>
   <% end %>
