@@ -10,10 +10,20 @@
       <% @blogs.each do |blog| %>
         <div class="col-md-3 pb-3">
           <div class="blog-panel text-center">
+<<<<<<< HEAD
             <h4><%= blog.user.name == nil ? "no-user" : blog.user.name.truncate(10) %></h4>
             <h5 class="m-3"><%= blog.title.truncate(5) %></h5>            <h6 class="m-2"><%= blog.content.truncate(15) %></h6>
             <div class="blog-links ">
               <%= link_to 'Show', blog, class: "btn btn-light m-2" %><br>
+=======
+            <div class="mt-4">
+              <h5><%= blog.user.name == nil ? "no-user" : blog.user.name.truncate(5) %></h5>
+              <h6 class="m-3"><%= blog.title.truncate(5) %></h6>
+              <h7 class="m-2"><%= blog.content.truncate(15) %></h7>
+              <div class="blog-links ">
+                <%= link_to 'Show', blog, class: "btn btn-light m-3" %><br>
+              </div>
+>>>>>>> 26363f404c27645bdd44b659e4a9f09b21983a6b
             </div>
           </div>
         </div>
