@@ -6,12 +6,14 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.index_all.page(params[:page])
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @comment = Comment.new
+    @comments = @blog.comments
   end
 
   # GET /blogs/new
