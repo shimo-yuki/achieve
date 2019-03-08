@@ -1,0 +1,10 @@
+
+<div class="text-center center-block">
+     <%= form_for @comment do |f| %>
+    <%= f.text_field :body %>
+    <%= f.hidden_field :blog_id %>
+
+    <%= f.submit %>
+
+    <% end %>
+  </div>

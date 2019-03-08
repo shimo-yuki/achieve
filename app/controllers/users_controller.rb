@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:top]
 
   def index
-    @users = User.all
+    @users = User.all.includes(:blogs)
     @user= current_user
   end
 

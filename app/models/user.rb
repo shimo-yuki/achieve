@@ -6,4 +6,11 @@ class User < ApplicationRecord
   has_one_attached :icon
   validates  :email,  presence: true
   has_many :blogs, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  scope :index_all, ->{
+    select(:id, :name)
+    .order(created_at: :asc)
+    .includes(:blogs)
+  }
+
 end
