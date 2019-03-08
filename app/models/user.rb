@@ -9,6 +9,9 @@ class User < ApplicationRecord
   has_many :blogs, dependent: :destroy
   has_many :comments, dependent: :destroy
 
+  paginates_per 10
+
+
   scope :index_all, ->{
     select(:id, :name)
     .order(created_at: :asc)
