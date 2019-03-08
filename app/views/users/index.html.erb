@@ -5,31 +5,21 @@
   <div class="col-md-3">
     <%= render 'layouts/profile' %>
   </div>
-
-    <div class="col-md-9">
-      <div class="row">
-        <% @users.each do |user| %>
-          <div class="col-md-6 ">
-            <div class="row text-center">
-              <div class="col-md-10 offset-md-1 user-panel mt-2 mb-2">
-                <% if user.name != nil %>
-                  <h3 class=" p-3"><%= user.name.truncate(10)%></h3>
-                <% else %>
-                  <h3 class="p-3" no-user</h3>
-                <% end %>
-                <% if user.icon.attached? %>
-                  <%= image_tag(user.icon) %>
-                <% else %>
-                  <%= image_tag("noimage.png") %>
-                <% end %>
-                <div class="blog-links text-center">
-                  <%= link_to 'Show', user, class: "btn btn-light m-2" %>
-                </div>
+  <div class="col-md-9">
+    <div class="row">
+      <% @users.each do |user| %>
+        <div class="col-md-6">
+          <div class="row text-center">
+            <div class="col-md-10 offset-md-1 user-panel mt-2 mb-2">
+              <h4><%= user.name == nil ? "no-user" : user.name.truncate(10) %></h4>
+              <%= user.icon.attached? ? image_tag(user.icon) : image_tag("noimage.png") %>
+              <div class="blog-links text-center">
+                <%= link_to 'Show', user, class: "btn btn-light m-2" %>
               </div>
             </div>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

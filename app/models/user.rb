@@ -3,10 +3,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
+
+  validates :email, presence: true
   has_one_attached :icon
-  validates  :email,  presence: true
   has_many :blogs, dependent: :destroy
   has_many :comments, dependent: :destroy
+
   scope :index_all, ->{
     select(:id, :name)
     .order(created_at: :asc)
