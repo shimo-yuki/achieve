@@ -10,7 +10,7 @@
       <% @blogs.each do |blog| %>
         <div class="col-md-3 pb-3">
           <div class="blog-panel text-center">
-            <h4><%= blog.user == nil ? "no-user" : blog.user.name.truncate(10) %></h4>
+            <h4 class="mt-4"><%= blog.user.name == nil ? "no-user" : blog.user.name.truncate(10) %></h4>
             <h5 class="m-3"><%= blog.title.truncate(5) %></h5>
             <h6 class="m-2"><%= blog.content.truncate(15) %></h6>
             <div class="blog-links">
