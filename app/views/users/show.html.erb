@@ -6,7 +6,7 @@
       <div class="no-current_user col-md-12 mt-3 mb-2 center-block">
       </div>
   </div>
-  <div class="col-md-6 offset-md-2">
+  <div class="col-md-2 offset-md-2">
     <div class="user_show">
       <p>
         <strong>img:</strong>
@@ -20,14 +20,16 @@
         <strong>name:</strong>
         <%= @user.name == nil ? "no-user" : @user.name %>
       </p>
-      <% if @user == current_user %>
-        <%= link_to edit_user_registration_path, class:"btn btn-default btn-s-md" do %>
-          <i class="fas fa-edit"></i>edit
-        <% end %>|
-      <% end %>
-      <%= link_to users_path, class:"btn btn-default btn-s-md" do %>
-        <i class="fas fa-undo-alt"></i>back
-      <% end %>
+      <div class="text-cemter ml-2">
+        <% if @user == current_user %>
+          <%= link_to edit_user_registration_path, class:"btn btn-light btn-s-md" do %>
+            <i class="fas fa-edit"></i>edit
+          <% end %>|
+        <% end %>
+        <%= link_to users_path, class:"btn btn-light btn-s-md" do %>
+          <i class="fas fa-undo-alt"></i>back
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
