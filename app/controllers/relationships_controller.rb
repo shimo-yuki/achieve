@@ -3,7 +3,7 @@ class RelationshipsController < ApplicationController
 
   def create
     relationship = current_user.active_relationships.create(followed_id: params[:user_id])
-    redirect_to users_path, notice: "#{relationship.followed.name}さんをフォローしました"
+    redirect_to users_path, notice: "#{relationship.followed.name}さんをフォローしました。"
   end
 
   def destroy
