@@ -53,6 +53,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'letter_opener_web', '~> 1.0'
   gem 'bullet'
+  gem 'hirb'
+  gem 'hirb-unicode'
 end
 
 group :test do

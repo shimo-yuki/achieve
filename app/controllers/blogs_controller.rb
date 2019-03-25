@@ -13,6 +13,7 @@ class BlogsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @blog.comments
+    @favorite = current_user.favorites.find_by(blog_id: @blog.id)
   end
 
   # GET /blogs/new
@@ -70,7 +71,7 @@ class BlogsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:title, :content)
+    params.require(:blog).permit(:title, :content, :id)
   end
 
 end

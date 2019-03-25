@@ -1,0 +1,25 @@
+
+<div class="row">
+  <div class="blog mb-3 text-center">
+    <h1>Listing Blogs</h1>
+  </div>
+  <div class="col-md-3">
+    <%= render 'layouts/profile' %>
+  </div>
+  <div class="col-md-9">
+    <div class="row">
+      <% @favorites.each do |favorite| %>
+        <div class="col-md-3 pb-3">
+          <div class="blog-panel text-center">
+            <h4 class="mt-4"><%= (favorite.blog.user == nil || favorite.blog.user.name == nil) ? "no-user" : favorite.blog.user.name.truncate(10) %></h4>
+            <h5 class="m-3"><%= favorite.blog.title.truncate(5) %></h5>
+            <h6 class="m-2"><%= favorite.blog.content.truncate(15) %></h6>
+            <div class="blog-links">
+              <%= link_to 'Show', blog_path(favorite.blog.id), class: "btn btn-light m-2" %><br>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
