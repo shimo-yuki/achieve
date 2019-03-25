@@ -40,7 +40,7 @@ footer {
   border-radius: 50px;
 }
 
-.current_user, .blog-panel, .user-panel{
+.current_user, .blog-panel, .user-panel, .blog-comment{
   border: solid 1px #000
 }
 .top{
@@ -217,4 +217,8 @@ footer {
 
 .field{
   width: 100%;
+}
+
+.label{
+  display: none;
 }

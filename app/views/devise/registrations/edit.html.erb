@@ -1,7 +1,7 @@
 <div class="row m-5">
   <div class="col-md-6 offset-md-3">
     <div class="card">
-      <h5 class="card-header">Edit <%= resource_name.to_s.humanize %></h5>
+      <h5 class="card-header">編集 <%= resource_name.to_s.humanize %></h5>
       <div class="form_group  col-md-8 offset-md-2">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
@@ -63,12 +63,12 @@
           </div>
         <% end %>
 
-        <h3>Cancel my account</h3>
+        <h3>アカウントをキャンセル</h3>
 
         <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete,  class: "btn btn-primary mb-4 btn-block text-center" %></p>
 
         <%= link_to :back , class:"btn btn-default btn-s-md" do %>
-          <i class="fas fa-undo-alt"></i>back
+          <i class="fas fa-undo-alt"></i>戻る
         <% end %>
       </div>
     </div>

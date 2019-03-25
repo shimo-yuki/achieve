@@ -2,10 +2,12 @@ class ContactsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :destroy, :update, :edit]
 
   def new
+    binding.pry
     @contact = Contact.new
   end
 
   def index
+    binding.pry
     @contact = Contact.new(contact_params)
     if @contact.invalid?
       render :new

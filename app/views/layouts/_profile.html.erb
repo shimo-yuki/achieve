@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <div class="current_user col-md-12 mt-2 mb-2 center-block">
     <p class="m-3 text-center">
-      <%= current_user.icon.attached?  ? image_tag(current_user) : image_tag("noimage.png") %>
+      <%= current_user.icon.attached?  ? image_tag(current_user.icon) : image_tag("noimage.png") %>
     </p>
     <p class="m-4 text-center">
       <strong>name:</strong>
@@ -14,7 +14,7 @@
     </div>
   </div>
 <% else %>
-  <div class="current_user col-md-12 mt-2 mb-2 center-block">
+  <div class="current_user col-md-12 mt-3 mb-2 center-block">
     <p class="m-3 text-center">
       <%= image_tag("noimage.png") %>
     </p>
